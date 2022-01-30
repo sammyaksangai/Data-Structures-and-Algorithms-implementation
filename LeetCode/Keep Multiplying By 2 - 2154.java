@@ -11,6 +11,7 @@ class HelloWorld {
         int[] nums = {8,19,4,5,15,3};
         int original = 2;
         int returnVal = h.findFinalValue(nums, original);
+        System.out.print(returnVal);
     }
     public int findFinalValue(int[] nums, int original) {
         if(nums.length == 1)
