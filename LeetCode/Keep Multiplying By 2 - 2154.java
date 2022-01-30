@@ -11,7 +11,6 @@ class HelloWorld {
         int[] nums = {8,19,4,5,15,3};
         int original = 2;
         int returnVal = h.findFinalValue(nums, original);
-        System.out.print(returnVal);
     }
     public int findFinalValue(int[] nums, int original) {
         if(nums.length == 1)
@@ -24,7 +23,6 @@ class HelloWorld {
         Arrays.sort(nums);
         int res = Arrays.binarySearch(nums, 3);
         boolean test = res > -1 ? true : false;
-        System.out.print(test);
         
             
         return original;
