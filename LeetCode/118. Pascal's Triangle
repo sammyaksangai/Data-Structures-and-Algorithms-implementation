@@ -1,0 +1,31 @@
+//05-02-2022
+//https://leetcode.com/problems/pascals-triangle/
+
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> list = new ArrayList<List<Integer>>();
+        List<Integer> childList = new ArrayList<Integer>();
+        childList.add(1);
+        list.add(childList);
+        if(numRows < 2)
+            return list;
+        childList = new ArrayList<Integer>();
+        childList.add(1);
+        childList.add(1);
+        list.add(childList);
+        if(numRows <= 2)
+            return list;
+        for(int i = 3; i <= numRows; i++)
+        {
+            childList = new ArrayList<Integer>();
+            childList.add(1);
+            for(int j = 1; j < i-1; j++)
+            {
+                childList.add(list.get(i-2).get(j-1) + list.get(i-2).get(j));
+            }
+            childList.add(1);
+            list.add(childList);
+        }
+        return list;
+    }
+}
