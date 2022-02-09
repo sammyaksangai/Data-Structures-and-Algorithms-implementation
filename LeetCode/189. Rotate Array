@@ -1,5 +1,9 @@
-//09-02-2022
-//https://leetcode.com/problems/rotate-array/
+/*
+09-02-2022
+https://leetcode.com/problems/rotate-array/
+https://betterprogramming.pub/3-ways-to-rotate-an-array-2a45b39f7bec - method 3
+*/
+
 
 class Solution {
     public void reverse(int[] nums, int start, int end)
